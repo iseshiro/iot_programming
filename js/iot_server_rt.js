@@ -1,5 +1,5 @@
 const server = require('http').createServer();
-const io = require('socket.io').listen(server);
+const io = require('socket.io')(server);
 const fs = require('fs');
 var path = require('path');
 const exec = require('child_process').exec;

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>socket.io Test</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <h1>ZYBO In/Out</h1>
+    <h2>use socket io</h2>
+    <div id="btn_parent">
+      <div>
+	<h2>Slide switch status</h2>
+      </div>
+    </div>
+    <table class="switchTable">
+      <tr>
+	<th>1</th>
+	<th>2</th>
+	<th>3</th>
+	<th>4</th>
+      </tr>
+      <tr>
+	<td id="sw1">OFF</td>
+	<td id="sw2">OFF</td>
+	<td id="sw3">OFF</td>
+	<td id="sw4">OFF</td>
+      </tr>
+    </table>
+    <div id="btn_parent">
+      <div>
+	<h2>Button status</h2>
+      </div>
+    </div>
+    <table class="switchTable">
+      <tr>
+	<th>1</th>
+	<th>2</th>
+	<th>3</th>
+	<th>4</th>
+      </tr>
+      <tr>
+	<td id="btn1">OFF</td>
+	<td id="btn2">OFF</td>
+	<td id="btn3">OFF</td>
+	<td id="btn4">OFF</td>
+      </tr>
+    </table>
+    <div id="btn_parent">
+      <div>
+	<h2>Set Green LED</h2>
+      </div>
+      <div class="btn">
+	  <input type="hidden" name="set_led1" value="OFF" id="set_led1">
+	  <input type="hidden" name="set_led2" value="OFF" id="set_led2">
+	  <input type="hidden" name="set_led3" value="OFF" id="set_led3">
+	  <input type="hidden" name="set_led4" value="OFF" id="set_led4">
+      </div>
+    </div>
+    <div id="led_parent">
+      <div id="led1" class="led">1</div>
+      <div id="led2" class="led">2</div>
+      <div id="led3" class="led">3</div>
+      <div id="led4" class="led">4</div>
+    </div>
+
+    <div id="btn_parent">
+      <div>
+	<h2>Set RGB LED</h2>
+      </div>
+      <div class="btn">
+	  <input type="hidden" name="set_pwm1" value="0" id="set_pwm1">
+	  <input type="hidden" name="set_pwm2" value="0" id="set_pwm2">
+	  <input type="hidden" name="set_pwm3" value="0" id="set_pwm3">
+	  <input type="hidden" name="set_pwm4" value="0" id="set_pwm4">
+	  <input type="hidden" name="set_pwm5" value="0" id="set_pwm5">
+	  <input type="hidden" name="set_pwm6" value="0" id="set_pwm6">
+      </div>
+    </div>
+    <h3>RGB LED 1</h3>
+    <table width="375">
+      <tr>
+	<td class="rgb1">Red:</td>
+	<td id="pwm_value1" class="rgb2">0</td>
+	<td>
+	  <input type="range" class="input-range" value="0" min="0" max="255" id="pwm_range1" class="rgb3">
+	</td>
+      </tr>
+      <tr>
+	<td class="rgb1">Green:</td>
+	<td id="pwm_value2" class="rgb2">0</td>
+	<td>
+	  <input type="range" class="input-range" value="0" min="0" max="255" id="pwm_range2">
+	</td>
+      </tr>
+      <tr>
+	<td class="rgb1">Blue:</td>
+	<td id="pwm_value3" class="rgb2">0</td>
+	<td>
+	  <input type="range" class="input-range" value="0" min="0" max="255" id="pwm_range3">
+	</td>
+      </tr>
+    </table>
+    <h3>RGB LED 2</h3>
+    <table width="375">
+      <tr>
+	<td class="rgb1">Red:</td>
+	<td id="pwm_value4" class="rgb2">0</td>
+	<td>
+	  <input type="range" class="input-range" value="0" min="0" max="255" id="pwm_range4" class="rgb3">
+	</td>
+      </tr>
+      <tr>
+	<td class="rgb1">Green:</td>
+	<td id="pwm_value5" class="rgb2">0</td>
+	<td>
+	  <input type="range" class="input-range" value="0" min="0" max="255" id="pwm_range5">
+	</td>
+      </tr>
+      <tr>
+	<td class="rgb1">Blue:</td>
+	<td id="pwm_value6" class="rgb2">0</td>
+	<td>
+	  <input type="range" class="input-range" value="0" min="0" max="255" id="pwm_range6">
+	</td>
+      </tr>
+    </table>
+      
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="application/javascript" src="./main_rt.js"></script>
+  </body>
+</html>
