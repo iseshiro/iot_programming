@@ -1,0 +1,5 @@
+zybo_boot:
+{
+      [bootloader]fsbl.elf
+      u-boot.elf
+}

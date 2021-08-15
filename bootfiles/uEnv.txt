@@ -1,0 +1,2 @@
+bootargs=console=ttyPS0,115200 root=/dev/mmcblk0p2 rw earlyprintk rootfstype=ext4 rootwait devtmpfs.mount=1
+uenvcmd=fatload mmc 0 0x03000000 fpga.bit && fpga loadb 0 0x03000000 $filesize && fatload mmc 0 0x03000000 zImage && fatload mmc 0 0x02A00000 devicetree.dtb && bootz 0x03000000 - 0x02A00000
