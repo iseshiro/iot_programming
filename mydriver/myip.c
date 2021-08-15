@@ -52,8 +52,8 @@ static ssize_t proc_myip_read(struct file *file, char __user *buf,
     mybtn_value = ioread32(base_addr + 1);
     mysw_value = ioread32(base_addr + 2);
 
-    stored_value[0] = mysw_value;
-    stored_value[1] = mybtn_value;
+    stored_value[0] = mybtn_value;
+    stored_value[1] = mysw_value;
     if (raw_copy_to_user(buf, stored_value, count) != 0) {
         return -EFAULT;
     }
